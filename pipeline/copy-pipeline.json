@@ -149,7 +149,14 @@
 						"referenceName": "CopyInputDS",
 						"type": "DatasetReference"
 					},
-					"enableLogging": false,
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage1",
+							"type": "LinkedServiceReference"
+						},
+						"path": "one1/project/logs"
+					},
+					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
