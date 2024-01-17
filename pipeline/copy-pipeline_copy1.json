@@ -91,16 +91,20 @@
 		],
 		"parameters": {
 			"pp_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "one1"
 			},
 			"pp_directory_in": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/input"
 			},
 			"pp_file": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			},
 			"pp_directory_out": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/output"
 			}
 		},
 		"annotations": []
