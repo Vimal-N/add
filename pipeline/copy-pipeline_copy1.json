@@ -151,8 +151,7 @@
 				"defaultValue": "project/input"
 			},
 			"pp_file": {
-				"type": "string",
-				"defaultValue": "SalesLTProduct.txt"
+				"type": "string"
 			},
 			"pp_directory_out": {
 				"type": "string",
