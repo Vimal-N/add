@@ -1,5 +1,5 @@
 {
-	"name": "copy-pipeline_copy1",
+	"name": "parameterized-copy-for-each",
 	"properties": {
 		"activities": [
 			{
