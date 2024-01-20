@@ -2,6 +2,38 @@
 	"name": "move-files-same-type-to-single-folder",
 	"properties": {
 		"description": "moving files of same type into single folder",
+		"activities": [
+			{
+				"name": "Get File info from folder",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
+			}
+		],
+		"parameters": {
+			"pp_directory_input": {
+				"type": "string"
+			},
+			"pp_container": {
+				"type": "string"
+			},
+			"pp_directory_output": {
+				"type": "string"
+			},
+			"pp_filename": {
+				"type": "string"
+			},
+			"pp_filename_type": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
