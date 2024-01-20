@@ -27,10 +27,16 @@
 							"ds_directory": {
 								"value": "@pipeline().parameters.pp_directory_input",
 								"type": "Expression"
+							},
+							"ds_file": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
 							}
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
