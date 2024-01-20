@@ -1,0 +1,7 @@
+{
+	"name": "move-files-same-type-to-single-folder",
+	"properties": {
+		"description": "moving files of same type into single folder",
+		"annotations": []
+	}
+}
