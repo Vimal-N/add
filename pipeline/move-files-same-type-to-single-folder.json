@@ -35,15 +35,38 @@
 						}
 					},
 					"fieldList": [
+						"childItems",
 						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
 						"type": "DelimitedTextReadSettings"
 					}
+				}
+			},
+			{
+				"name": "Move files to destination",
+				"description": "this activity moves the file of same type into a folder",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get File info from folder",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get File info from folder').output.childItems",
+						"type": "Expression"
+					},
+					"isSequential": true
 				}
 			}
 		],
