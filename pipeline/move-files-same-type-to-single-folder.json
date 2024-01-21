@@ -150,7 +150,7 @@
 											"type": "Expression"
 										},
 										"ds_directory": {
-											"value": "@pipeline().parameters.pp_directory_output_csv",
+											"value": "@if(endswith(item().name,'.csv'),pipeline().parameters.pp_directory_output_csv,pipeline().parameters.pp_directory_output_txt)",
 											"type": "Expression"
 										},
 										"ds_file": {
@@ -165,7 +165,13 @@
 							"name": "Separate csv and txt files",
 							"type": "Filter",
 							"dependsOn": [],
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"items": {
+									"value": "@item().name",
+									"type": "Expression"
+								}
+							}
 						}
 					]
 				}
