@@ -139,6 +139,12 @@
 			},
 			"pp_filename_type": {
 				"type": "string"
+			},
+			"pp_directory_output_csv": {
+				"type": "string"
+			},
+			"pp_directory_output_txt": {
+				"type": "string"
 			}
 		},
 		"annotations": []
