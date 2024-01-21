@@ -97,7 +97,26 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -113,7 +132,27 @@
 											"type": "Expression"
 										},
 										"ds_file": {
-											"value": "@pipeline().parameters.pp_filename",
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ParameterDataSet",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": {
+											"value": "@pipeline().parameters.pp_container",
+											"type": "Expression"
+										},
+										"ds_directory": {
+											"value": "@pipeline().parameters.pp_directory_output_csv",
+											"type": "Expression"
+										},
+										"ds_file": {
+											"value": "@item().name",
 											"type": "Expression"
 										}
 									}
