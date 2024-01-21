@@ -71,14 +71,7 @@
 						{
 							"name": "Copy csv files",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Separate csv and txt files",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -160,18 +153,6 @@
 									}
 								}
 							]
-						},
-						{
-							"name": "Separate csv and txt files",
-							"type": "Filter",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"items": {
-									"value": "@item().name",
-									"type": "Expression"
-								}
-							}
 						}
 					]
 				}
