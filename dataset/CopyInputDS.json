@@ -14,7 +14,7 @@
 				"folderPath": "project/input",
 				"fileSystem": "one1"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
