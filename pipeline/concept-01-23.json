@@ -33,7 +33,14 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Users/vimalnatarajan0@gmail.com/first notebook"
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricksLS",
+								"type": "LinkedServiceReference"
+							}
 						}
 					]
 				}
